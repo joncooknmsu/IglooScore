@@ -1,20 +1,17 @@
 # IglooScore
 An Olympic igloo scoring system.
 
-From an old assignment.
-
 ## CS 581 Assignment 3
 
-This assignment involves using JUnit to perform automated
+This assignment involves using JUnit 4 to perform automated
 unit testing on some classes.
 
-JUnit is available at www.junit.org.
+JUnit 4 is available at https://junit.org/junit4/ 
+Note that JUnit 5 is NOT compatible with JUnit 4.
 
-The latest stable version is 4.8.2. It looks like beta versions of
-4.9 are available but I do not recommend using them. For this
-assignment you should download the 4.8.2 version and place it in
-your own directory space. The jar file is only about 300KB. Do NOT
-put it in your CS581 workspace and definitely do NOT commit it
+In Java 4 you typically need both the "junit" jarfile and the
+"hamcrest" jarfile (which has some helper classes). Do NOT put 
+them in your CS581 workspace and definitely do NOT commit them
 into the course repository!
 
 From the JUnit home page, click on "Getting Started" in the 

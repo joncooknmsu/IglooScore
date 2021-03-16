@@ -26,10 +26,6 @@ public IglooScore2()
    score3 = 0;
 }
 
-/*@ requires s1>=0 && s1<=50 && s2>=0 && s2<=50 && s3>=0 && s3<=50;
-    ensures score1>=0 && score1<=50 && score2>=0 && score2<=50 &&
-            score3>=0 && score3<=50;
-@*/
 public void recordScores(int s1, int s2, int s3)
 {
    score1 = s1;
@@ -37,11 +33,6 @@ public void recordScores(int s1, int s2, int s3)
    score3 = s3;
 }
 
-/*@
- requires score1>=0 && score1<=50 && score2>=0 && score2<=50 &&
-          score3>=0 && score3<=50;
- ensures \result>=score1 && \result>=score2 && \result>=score3;
-@*/
 public int overallScore()
 {
    int s, s1, s2;

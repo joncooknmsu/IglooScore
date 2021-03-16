@@ -83,7 +83,7 @@
    </taskdef>
 </target>
 
-<!-- Compile project program (but not tests) -->
+<!-- Compile project program (but not the tests) -->
 <target name="compile" depends="makedirs" description="compile the source ">
    <javac includeantruntime="false" debug="on" 
           srcdir="${source.dir}" destdir="${build.dir}"/>
