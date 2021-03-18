@@ -1,7 +1,7 @@
 # IglooScore
 An Olympic igloo scoring system.
 
-## CS 581 Assignment 3
+## CS 581 Assignment 3 Testing Portion
 
 This assignment involves using JUnit 4 to perform automated
 unit testing on some classes.
@@ -26,22 +26,22 @@ of the classes under test.
 
 You have two classes to test: IglooScore1 and IglooScore2. They 
 both implement the same requirements, which are described in 
-their header comment. They may have errors, but do not fix or
-change their source code in any way. Your unit tests using JUnit
-will exercise an object (or more) of the class directly, and will
-not use the "main" method. You do not have to test "main", and
-should ignore it entirely. It is there just so that you can "run"
-the classes in a standalone matter to see what they do.
+their header comment. They may have errors, but do NOT fix or
+change their source code in any way during this testing. 
+Your unit tests using JUnit will exercise an object (or more) of 
+the class directly, and will not use the "main" method. You do not 
+have to test "main", and should ignore it entirely. It is there 
+just so that you can "run" the classes in a standalone matter to 
+see what they do.
 
 In each section below, when creating test cases you should not
 have "redundant" test cases which do not exercise anything new.
 Having more tests than you need will REDUCE your grade, not
-enhance it! Consider each section below as "starting new", and
-do not assume the previous sections' tests already cover some
-of the cases. You certainly can REUSE invidual test cases in 
-between sections. 
+enhance it! 
 
-You must write a comment header for each test case that 
+Every test function __MUST__ have a descriptive name. Do not be
+afraid of long, even very long test function names!
+You must also write a comment header for each test case that 
 succinctly describes that test case. Just write a short 
 description -- a long verbose description is no good!
 
@@ -85,23 +85,21 @@ http://en.wikipedia.org/wiki/Coverage_testing
 
 In this section you must create tests that satisfy various
 levels of control flow coverage. Your test classes must be named
-"WBCFIS1" and "WBCFIS2" for the respective tests for the two
-classes under test. Your test classes must have tests ordered
-in the code from the top to bottom of the file according to
-the following criteria:
+"WBIS1" and "WBIS2" for the respective tests for the two
+classes under test. 
 
-1. The first set of tests must accomplish full statement coverage;
-2. Then added to those (going down in the file), any extra tests
-   (if any) to acheive full branch/decision coverage;
-3. Then added to those, any extra tests (if any) that are needed to
-   acheive full condition coverage.
+Your starting point for coverage is the coverage you are already
+achieving on your black box tests. Now, into your test classes 
+add ONLY those test cases that are needed to achieve 100% condition
+coverage (again, ignoring main()).
 
-Each step should be marked clearly using comments in your test
-class. Since the two classes under test are implemented quite
-differently, it is doubtful that your two test classes will
-contain the same exact set of tests.
+Each test must be clearly commented with the reason it is being
+added (i.e., what coverage point it is addressing). Since the 
+two classes under test are implemented quite differently, it is 
+doubtful that your two test classes will contain the same exact set 
+of tests.
 
-## Section 3: White box data flow testing
+## (OLD -- DO NOT DO!) Section 3: White box data flow testing 
 
 White box data flow testing is geared towards testing the 
 possible data flows in the program rather than looking at
@@ -138,13 +136,4 @@ of the chains you wrote down. As before, you should not create unnecessary
 tests which do not accomplish anything new. In each test header comment, 
 list the def-use chains that it exercises.
 
-## Submitting the assignment
-
-To submit this assignment, check in under a directory named 
-"assignment3" all java source files for the original classes 
-under test, and the six JUnit test classes you created, plus a 
-short text file that lists the def-use chains from the third
-part and describes any errors your tests found in 
-either of the classes, and which type of testing methodology 
-found the errors.
 
