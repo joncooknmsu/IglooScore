@@ -37,21 +37,19 @@
 <target name="setpathj" if="jenkins">
    <echo message="Setting paths for Jenkins (${env.HOME})" />
    <path id="junit.class.path" >
-      <pathelement location="/usr/share/java/junit4-4.11.jar"/>
-      <pathelement location="/usr/share/java/hamcrest-core-1.3.jar" />
+      <pathelement location="/usr/share/java/junit-platform-console-standalone-1.8.2.jar"/>
       <pathelement location="${build.dir}" />
    </path>
-   <property name="jacocodir" location="/usr/local/jacoco/lib"/>
+   <property name="jacocodir" location="/usr/local/jacoco-0.8.7/lib"/>
 </target>
 <target name="setpathh" unless="jenkins">
    <!-- CHANGE ALL PATHS in this target for your own build environment -->
    <echo message="Setting paths for home (${env.HOME})" />
    <path id="junit.class.path" >
-      <pathelement location="/home/jcook/tools/junit/junit-4.13.2.jar"/>
-      <pathelement location="/home/jcook/tools/junit/hamcrest-2.2.jar" />
+      <pathelement location="/home/jcook/tools/junit/junit-platform-console-standalone-1.8.2.jar"/>
       <pathelement location="${build.dir}" />
    </path>
-   <property name="jacocodir" location="/home/jcook/tools/jacoco-0.8.6/lib"/>
+   <property name="jacocodir" location="/home/jcook/tools/jacoco-0.8.7/lib"/>
 </target>
 <target name="setpaths" depends="setpathj,setpathh" />
 
