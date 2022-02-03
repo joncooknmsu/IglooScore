@@ -14,7 +14,7 @@
       and then will use JaCoCo to generate the HTML report. If
       you install JUnit and JaCoCo and set up everything correctly,
       this will work for you. This build file will also work under
-      Jenkins.
+      the Jenkins CI system.
 </description>
 
 <!-- Properties (mostly project subdirectories) -->
@@ -23,7 +23,7 @@
 <property name="test.dir" location="test" />
 <property name="doc.dir" location="doc" />
 <property name="report.dir" location="report" />
-<property environment="env"/> <!-- set prefix to use for environment variables -->
+<property environment="env"/> <!-- prefix to use for environment variables -->
 
 <!-- Create a T/F flag for whether we are running under Jenkins -->
 <!-- Jenkins sets $HOME to /var/lib/jenkins, so we test it -->
@@ -94,7 +94,7 @@
    </java>
 </target>
 
-<!-- Run the project program under JaCoCo -->
+<!-- Sample run of the project program under JaCoCo -->
 <target name="jacocorun" depends="compile" description="example run w/ JaCoCo">
    <java classname="IglooScore1" classpath="${build.dir}" fork="yes"> 
       <arg line="50 25 10"/>
